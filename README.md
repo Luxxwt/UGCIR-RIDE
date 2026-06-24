@@ -1,4 +1,4 @@
-# MTCIR Codebase
+# UGCIR Codebase
 
 This repository contains the code for the paper *Distilling Slow Reasoning into Fast Retrieval: A Benchmark and Framework for User-Guided Conversational Image Retrieval*.
 
@@ -56,7 +56,7 @@ export GPT5_BASE_URL=your_openai_compatible_gpt5_base_url
 
 ## 3. Data
 
-This repository includes the code and a lightweight metadata-only data release. The included metadata is intended for data-format inspection, source tracing, and qualitative examples. It does not redistribute image binaries, and it is not a replacement for the full MTCIR image gallery.
+This repository includes the code and a lightweight metadata-only data release. The included metadata is intended for data-format inspection, source tracing, and qualitative examples. It does not redistribute image binaries, and it is not a replacement for the full UGCIR image gallery.
 
 Metadata-only Open Images subset:
 
@@ -68,13 +68,11 @@ Metadata-only Open Images subset:
 
 The metadata-only subset contains 10,000 Open Images entries that can be traced by filename ImageID to official Open Images metadata. Each record includes fields such as `relative_path`, `image_id`, `category`, `license`, `author`, `title`, `original_url`, `original_landing_url`, and `original_md5`. Image files are not included; use the source URLs and license fields for provenance inspection. See [data/metadata_release_10k/README.md](data/metadata_release_10k/README.md) for the exact file format.
 
-Showcase train/test files in the metadata release:
+Gallery path file in the metadata release:
 
-- [data/metadata_release_10k/data/train/train_showcase.jsonl](data/metadata_release_10k/data/train/train_showcase.jsonl)
-- [data/metadata_release_10k/data/test/test_targets_showcase.json](data/metadata_release_10k/data/test/test_targets_showcase.json)
-- [data/metadata_release_10k/data/gallery/gallery_paths.txt](data/metadata_release_10k/data/gallery/gallery_paths.txt)
+- [data/metadata_release_10k/gallery/gallery_paths.txt](data/metadata_release_10k/gallery/gallery_paths.txt)
 
-These files are retained to show the MTCIR training and testing data formats. Since this is a metadata-only release, image paths referenced by the train/test JSON are not guaranteed to be available in this repository. They should be treated as format examples unless the corresponding image gallery is prepared separately.
+[data/metadata_release_10k/gallery/gallery_paths.txt](data/metadata_release_10k/gallery/gallery_paths.txt) lists the 10,000 metadata entries using the same relative path format as the full gallery. The full-pipeline training and testing files are provided separately under [data/train](data/train) and [data/test](data/test).
 
 Verify the metadata release with:
 

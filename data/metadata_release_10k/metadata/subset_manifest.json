@@ -6,8 +6,6 @@
   "metadata_records": 10000,
   "categories_covered": 179,
   "category_sampling": "deterministic round-robin sampling across categories with filename ImageID matches to Open Images metadata",
-  "train_examples": 300,
-  "test_tasks": 69,
   "source_metadata": [
     "https://storage.googleapis.com/openimages/2018_04/train/train-images-with-labels-with-rotation.csv",
     "https://storage.googleapis.com/openimages/2018_04/validation/validation-images-with-rotation.csv",
@@ -197,6 +195,7 @@
   "notes": [
     "The relative_path field mirrors the local MTCIR gallery layout but the image files are not packaged.",
     "Use original_url and license fields for source tracing.",
-    "The train/test JSON files are retained as format examples; referenced images are not guaranteed to appear in this metadata-only subset."
-  ]
+    "Full-pipeline train/test JSON files are provided outside this metadata-only release under data/train and data/test."
+  ],
+  "gallery_paths_file": "gallery/gallery_paths.txt"
 }
