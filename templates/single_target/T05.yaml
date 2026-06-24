@@ -1,0 +1,12 @@
+template_id: T05_Progressive_Refinement_Negative_Constraint
+description: "In the refinement process, the user can use negative words (e.g., 'don't', 'except') to exclude certain features and define requirements more precisely."
+dialogue_pattern:
+  description: "Broad Category -> Add positive attributes -> Use negation to exclude distractors -> Further Refinement (if needed) -> Lock on Target"
+  important_notes:
+  - "These stages are LOGICAL PHASES, not a turn-by-turn script"
+  - "Each arrow (->) does NOT mean 'next turn' - it means 'next type of refinement'"
+  - "You may stay in the same stage for 2-4 turns if needed to reveal details gradually"
+settings:  
+  num_goal_images: 1
+  min_turns: 3
+  max_turns: 8

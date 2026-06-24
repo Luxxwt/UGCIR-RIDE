@@ -1,0 +1,18 @@
+template_id: T18_Comparative_Compare_And_Contrast
+description: "The user refines the search by explicitly comparing the retrieved images—rejecting a feature seen in one image (negative anchor) or preferring a feature seen in another (positive anchor)."
+dialogue_pattern:
+  description: "Broad Category -> Comparative Feedback -> Further Refinement (if needed) -> Lock on Target"
+  important_notes:
+  - "These stages are LOGICAL PHASES, not a turn-by-turn script"
+  - "Each arrow (->) does NOT mean 'next turn' - it means 'next type of interaction'"
+  - "Comparative Feedback: You MUST reference at least TWO DIFFERENT images in this turn."
+  - "  -CRITICAL SPEECH RULE: Do NOT name the specific features. Use abstract attribute names."
+  - "  - Scenario A (Negative Comparison): If an image shows something you specifically DON'T want, e.g.: 'Unlike image [X]...'"
+  - "  - Scenario B (Positive Comparison): If an image shows a style/feature you like, e.g.: 'I prefer the color in image [Y].'"
+  - "  - Mixed Strategy: You can combine them. E.g., 'Make its shape look like image 2, but not the color like image 1.'"
+  - "Constraint: When you say 'Unlike image X', make sure Image X actually possesses the trait you are rejecting."
+  - "Further Refinement is the ONLY flexible stage that may be repeated multiple times (not just once)" 
+settings:
+  num_goal_images: 1
+  min_turns: 3
+  max_turns: 8

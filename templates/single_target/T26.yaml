@@ -1,0 +1,15 @@
+template_id: T26_Abstract_Conceptual_Refinement
+description: "The user starts with a high-level abstract concept (e.g., 'Freedom', 'Time') and progressively translates it into concrete visual symbols or metaphors."
+dialogue_pattern:
+  description: "Initial Conceptual Request -> Visual/Symbolic Translation -> Further Refinement(if needed) -> Lock on Target"
+  important_notes:
+  - "These stages are LOGICAL PHASES, not a turn-by-turn script"
+  - "Each arrow (->) does NOT mean 'next turn' - it means 'next type of interaction'"
+  - "Further Refinement is the ONLY flexible stage that may be repeated multiple times (not just once)"
+  - "Initial Conceptual Request: Start by requesting ONLY the abstract concept or idea. (e.g., 'I am looking for an image that represents Freedom'). Do NOT describe visual objects yet."
+  - "Visual/Symbolic Translation: This is the CRITICAL bridging stage. Look at the retrieved images (which might be random or generic). Then, specify a CONCRETE visual metaphor to narrow it down."
+  - "Translation Example: User first asks for 'Peace' -> User then refines: 'I want to see a white dove flying with an olive branch to represent peace.'"
+settings:
+  num_goal_images: 1
+  min_turns: 3 
+  max_turns: 8

@@ -1,0 +1,20 @@
+template_id: T22_Pivoting_Related_Change
+description: "The user searches for a target, finds it, but then uses that image as a conceptual bridge to switch to a related but distinct second target (e.g., finding a 'Race Car' then switching to a 'Race Track')."
+dialogue_pattern:
+  description: "Broad Category(Target 1) -> Further Refinement 1(if needed) -> Target 1 Found & Associative Pivot -> Further Refinement 2(if needed) -> Lock on Target"
+  important_notes:
+  - "These stages are LOGICAL PHASES, not a turn-by-turn script"
+  - "Each arrow (->) does NOT mean 'next turn' - it means 'next type of interaction'"
+  - "This template simulates a TWO-TARGET scenario: Target 1 (Bridge) and Target 2 (Final)."
+  - "Broad Category(Target 1): Focus ONLY on finding 'target_image_1_description'. Ignore Target 2 for now."
+  - "Target 1 Found & Associative Pivot: Enter this stage ONLY when Target 1 is retrieved. Acknowledge the match, then use natural LOGIC to bridge to Target 2."
+  - "After the pivot, compare retrieved images ONLY against 'target_image_2_description'."
+settings:
+  num_goal_images: 2
+  min_turns: 3
+  max_turns: 10
+special_instructions:
+  target_structure:
+    - "You will receive TWO target descriptions:"
+    - "target_image_1_description: The initial target (acts as a conceptual bridge)."
+    - "target_image_2_description: The final target (conceptually related but visually distinct)."

@@ -1,0 +1,12 @@
+template_id: "T01_Progressive_Refinement_Simple"
+description: "The user starts with a broad category, then adds specific physical attributes progressively until all key details are revealed."
+dialogue_pattern:
+  description: "Broad Category -> Add Attribute 1 -> Add Attribute 2 -> Further Refinement (if needed) -> Lock on Target"
+  important_notes:
+  - "These stages are LOGICAL PHASES, not a turn-by-turn script"
+  - "Each arrow (->) does NOT mean 'next turn' - it means 'next type of refinement'"
+  - "You may stay in the same stage for 2-4 turns if needed to reveal details gradually"
+settings:
+  num_goal_images: 1
+  min_turns: 3
+  max_turns: 8

@@ -1,0 +1,12 @@
+template_id: T02_Progressive_Refinement_Scene_To_Object
+description: "The user starts with a request describing an action or scenario and then progressively refines the subject object."
+dialogue_pattern:
+  description: "Action/Scene Description -> Specify subject category -> Add subject attributes -> Further Refinement (if needed) -> Lock on Target"
+  important_notes:
+  - "These stages are LOGICAL PHASES, not a turn-by-turn script"
+  - "Each arrow (->) does NOT mean 'next turn' - it means 'next type of refinement'"
+  - "You may stay in the same stage for 2-4 turns if needed to reveal details gradually"
+settings:
+  num_goal_images: 1
+  min_turns: 3
+  max_turns: 8

@@ -1,0 +1,18 @@
+template_id: T17_Comparative_Combine_Features
+description: "The user acts as a compositor, picking specific correct attributes from different retrieved images to form the final target description."
+dialogue_pattern:
+  description: "Broad Category -> Cross-Reference Synthesis -> Further Refinement (if needed) -> Lock on Target"
+  important_notes:
+  - "These stages are LOGICAL PHASES, not a turn-by-turn script"
+  - "Each arrow (->) does NOT mean 'next turn' - it means 'next type of interaction'"
+  - "Cross-Reference Synthesis: This is the critical step."
+  - "  -CRITICAL SPEECH RULE: Do NOT name the specific features. Use abstract attribute names."
+  - "  - Action: Look at the retrieved images. Find one image that gets Attribute A right (e.g., Color) and another image that gets Attribute B right (e.g., Shape)."
+  - "  - Instruction: Explicitly command the system to combine them."
+  - "  - Syntax Example: 'I want the [Subject] from image 1, but with the [Color/Texture] from image 2.'"
+  - "  - Constraint: Ensure the attributes you are extracting from the images actually match your Target Description."
+  - "Further Refinement is the ONLY flexible stage that may be repeated multiple times (not just once)" 
+settings:
+  num_goal_images: 1
+  min_turns: 3
+  max_turns: 8

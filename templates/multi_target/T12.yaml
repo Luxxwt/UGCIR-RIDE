@@ -1,0 +1,24 @@
+template_id: T12_Attribute_Modification_Simple_Attribute
+description: "The user finds an image close to their needs, then requests a single discrete attribute change (e.g., color, material, pattern) while keeping other aspects the same."
+dialogue_pattern:
+  description: "Broad Category -> Further Refinement(if needed) -> Baseline Match Found and Attribute Modification Request  -> Further Refinement (if needed) -> Lock on Target"  
+  important_notes:
+    - "These stages are LOGICAL PHASES, not a turn-by-turn script"
+    - "Each arrow (->) does NOT mean 'next turn' - it means 'next type of interaction'"
+    - "This template simulates a TWO-TARGET scenario: Target 1 (baseline) and Target 2 (modified)"
+    - "The user first searches for Target 1, which should appear in early retrieved results"
+    - "After finding Target 1, the user expresses satisfaction but requests ONE attribute change"
+    - "The modification attribute must be discrete and simple (color, material, pattern, size category, basic style)"
+    - "All other attributes from Target 1 must remain unchanged in Target 2"
+    - "The conversation should feel natural, e.g.: 'This is good, but can you change [X]?'"
+    - "Baseline Match Found and Attribute Modification Request stage: User acknowledges the current result matches most needs but specifies the single attribute to change"
+    - "Lock on Target stage: User confirms the modified version (Target 2) is found"
+settings:  
+  num_goal_images: 2
+  min_turns: 3
+  max_turns: 10
+special_instructions:
+    target_structure:
+      - "You will receive TWO target descriptions:"
+      - "target_image_1_description: The baseline image (should appear in early results)"
+      - "target_image_2_description: The modified version (differs by ONE discrete attribute)"

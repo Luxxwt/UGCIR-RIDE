@@ -1,0 +1,16 @@
+template_id: T19_Comparative_Exclude_And_Request
+description: "User starts with a broad request for diversity. After seeing the results, the user filters them by explicitly rejecting specific images (negative examples) while requesting more similar to the others (positive examples)."
+dialogue_pattern:
+  description: "Broad Category -> Partial Rejection & Similarity Request -> Further Refinement (if needed) -> Lock on Target"
+  important_notes:
+  - "These stages are LOGICAL PHASES, not a turn-by-turn script"
+  - "Each arrow (->) does NOT mean 'next turn' - it means 'next type of interaction'"
+  - "Partial Rejection & Similarity Request: This is the filtering turn."
+  - "  - Action: Look at the retrieved images. Identify at least one 'Good' image (matches target style) and one 'Bad' image (matches avoided style)."
+  - "  - e.g.: 'I want more images like [Image X] and [Image Y], but get rid of ones like [Image Z].'"
+  - "  - Logic: Use the 'Bad' image as a negative example to explicitly guide the system away from that style/object."
+  - "Further Refinement is the ONLY flexible stage that may be repeated multiple times (not just once)"
+settings:
+  num_goal_images: 1
+  min_turns: 3
+  max_turns: 8

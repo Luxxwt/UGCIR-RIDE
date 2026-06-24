@@ -1,0 +1,16 @@
+template_id: T24_Abstract_Style_Based_Refinement
+description: "The user refines their search using style, genre, or artistic terminology (e.g., cyberpunk, Nordic). The user seeks a particular aesthetic or design philosophy within a concrete subject category."
+dialogue_pattern:
+  description: "Broad Category -> Further Refinement(if needed) -> Style/Aesthetic Refinement -> Further Refinement(if needed) -> Lock on Target"
+  important_notes:
+  - "These stages are LOGICAL PHASES, not a turn-by-turn script"
+  - "Each arrow (->) does NOT mean 'next turn' - it means 'next type of interaction'"
+  - "Further Refinement is the ONLY flexible stage that may be repeated multiple times (not just once)"
+  - "Style/Aesthetic Refinement: This is the CRITICAL stage. Look at the retrieved images. If the subject is right but the design/artistic style is wrong, apply style keywords."
+  - "The style refinement can happen at any point - early or late in the conversation"
+  - "Style words should be abstract aesthetic categories: design movements, artistic periods, cultural styles (not concrete like 'blue walls' or 'leather sofa')"
+  - "The conversation should balance concrete subject specification with abstract style/aesthetic refinement"
+settings:
+  num_goal_images: 1
+  min_turns: 3
+  max_turns: 8

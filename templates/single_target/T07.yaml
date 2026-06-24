@@ -1,0 +1,22 @@
+template_id: T07_User_Reactive_Negation
+description: "The user starts with a general request. Upon seeing the results containing unwanted elements, the user IMMEDIATELY acknowledges them and issues a negation command in the same turn."
+dialogue_pattern:
+  description: "Broad Category ->  Visual Verification & Immediate Negation -> Further Refinement (if needed) -> Lock on Target"
+  important_notes:
+  - "These stages are LOGICAL PHASES, not a turn-by-turn script"
+  - "Visual Verification & Immediate Negation:"
+  - "  1. LOOK at the retrieved images. Do NOT hallucinate."
+  - "  2. VERIFY: Does the [Unwanted Element] actually appear in the images?"
+  - "  3. IF YES: Explicitly reference the visual evidence.e.g.,'I see [Unwanted Element] in image [X] (or in these images)...'"
+  - "  4. THEN: Issue the negation command in the SAME turn (e.g., 'I want [Subject] WITHOUT [Unwanted Element]')."
+  - "You may stay in the same stage for 2-4 turns if needed to reveal details gradually"
+  - "=== NEGATION SCOPE (WHAT TO CORRECT) ==="
+  - "The 'Negation' is not just about removing objects. It applies to ANY visual mismatch:"
+  - "Type A: Unwanted Objects"
+  - "Type B: Attribute Errors"
+  - "Type C: Spatial Errors"
+  - "Type D: Style/Material Errors" 
+settings:
+  num_goal_images: 1
+  min_turns: 3
+  max_turns: 8

@@ -1,0 +1,23 @@
+template_id: T15_Attribute_Modification_Add_Element
+description: "The user finds an image matching the main subject and context, then requests to ADD a specific secondary object or element to the scene."
+dialogue_pattern:
+  description: "Broad Category -> Further Refinement (if needed) -> Baseline Match Found and Add Element Request -> Further Refinement (if needed) -> Lock on Target"
+  important_notes:
+  - "These stages are LOGICAL PHASES, not a turn-by-turn script"
+  - "Each arrow (->) does NOT mean 'next turn' - it means 'next type of interaction'"
+  - "This template simulates a TWO-TARGET scenario: Target 1 (baseline) and Target 2 (modified)"
+  - "The user first searches for Target 1, which should appear in early retrieved results"
+  - "After finding Target 1, the user expresses satisfaction but requests element addition"
+  - "Only a new element is added. All other attributes must remain consistent between Target 1 and Target 2."
+  - "The conversation should feel natural."
+  - "Baseline Match Found and Add Element Request: User acknowledges the current result matches most needs but specifies the single attribute to add"
+  - "Lock on Target stage: User confirms the modified version (Target 2) is found"
+settings:
+  num_goal_images: 2
+  min_turns: 3
+  max_turns: 10
+special_instructions:
+  target_structure:
+    - "You will receive TWO target descriptions:"
+    - "target_image_1_description: The baseline image (Main subject/context ONLY)."
+    - "target_image_2_description: The final image (Main subject + Added Element)."

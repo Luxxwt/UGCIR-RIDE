@@ -1,0 +1,20 @@
+template_id: T21_Pivoting_Emotion_Driven
+description: "The user searches for a target, finds it, but has a strong emotional reaction (e.g., too sad, too scary, too boring) and pivots to a contrasting target (e.g., happy, calm, exciting) to change the mood."
+dialogue_pattern:
+  description: "Broad Category(Target 1) -> Further Refinement 1(if needed) -> Target 1 Found & Emotional Pivot -> Further Refinement (Target 2) -> Lock on Target"
+  important_notes:
+  - "These stages are LOGICAL PHASES, not a turn-by-turn script"
+  - "Each arrow (->) does NOT mean 'next turn' - it means 'next type of interaction'"
+  - "This template simulates a TWO-TARGET scenario: Target 1 (Emotional Trigger) and Target 2 (Emotional Relief/Contrast)."
+  - "Broad Category(Target 1): Focus ONLY on finding 'target_image_1_description'. Ignore Target 2 for now."
+  - "Target 1 Found & Emotional Pivot: Enter this stage ONLY when Target 1 is retrieved. Acknowledge the match, but ask for a new one due to an EMOTIONAL response. "
+  - "Search for New Target (Target 2): This is a FRESH START. Describe Target 2 fully as a new visual request to shift the mood."
+settings:
+  num_goal_images: 2
+  min_turns: 3
+  max_turns: 10
+special_instructions:
+  target_structure:
+    - "You will receive TWO target descriptions:"
+    - "target_image_1_description: The first target (often evokes a specific strong emotion)."
+    - "target_image_2_description: The final target (provides an emotional contrast to the first)."

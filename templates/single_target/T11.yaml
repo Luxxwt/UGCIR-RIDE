@@ -1,0 +1,15 @@
+template_id: T11_Corrective_Feedback_Ambiguity_Resolution
+description: "The user adds a subjective or vague attribute (e.g., 'bright', 'vintage'). The system retrieves the most common/stereotypical interpretation, which differs from the user's specific intent. The user then clarifies their specific definition."
+dialogue_pattern:
+  description: "Broad Category -> Add Ambiguous/Subjective Attribute ->  Observation & Correction -> Further Refinement (if needed) -> Lock on Target"
+  important_notes:
+  - "These stages are LOGICAL PHASES, not a turn-by-turn script"
+  - "Add Ambiguous Attribute: Add a SINGLE vague/subjective descriptor. DO NOT explain it yet."
+  - "Observation & Correction: This happens in the turn AFTER you added the ambiguous attribute."
+  - "  - Action: Look at the retrieved images. They likely show the 'common/stereotypical' meaning (e.g., White walls for 'bright')."
+  - "  - Output: IMMEDIATELY say that is not what you meant and define your specific intent."
+  - "Further Refinement is the ONLY flexible stage that may be repeated multiple times (not just once)"
+settings:
+  num_goal_images: 1
+  min_turns: 3
+  max_turns: 8

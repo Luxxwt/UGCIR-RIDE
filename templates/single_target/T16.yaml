@@ -1,0 +1,16 @@
+template_id: T16_Comparative_Choice_And_Refine
+description: "The user starts with a broad request to get diverse results. In the next turn, the user selects the retrieved image that is closest to the target (setting the baseline style/composition) and adds specific refinements."
+dialogue_pattern:
+  description: "Broad Category -> Visual Selection & Refinement -> Further Refinement (if needed) -> Lock on Target"
+  important_notes:
+  - "These stages are LOGICAL PHASES, not a turn-by-turn script"
+  - "Each arrow (->) does NOT mean 'next turn' - it means 'next type of interaction'"
+  - "Visual Selection & Refinement: This happens in the turn AFTER you see the first batch of images."
+  - "  - Action: Compare the retrieved images to your Target. Identify the one that is closest in style, composition, or subject."
+  - "  - Output: Explicitly reference that image (e.g., 'The 2nd image is closest', 'I like the style of image 1')."
+  - "  - Constraint: You MUST also add a specific refinement in the same sentence (e.g., '...but change the color to red' or '...but make it match the target description more by adding [Detail]')."
+  - "Further Refinement is the ONLY flexible stage that may be repeated multiple times (not just once)" 
+settings:
+  num_goal_images: 1
+  min_turns: 3
+  max_turns: 8

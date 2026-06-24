@@ -1,0 +1,14 @@
+template_id: T06_User_Self_Correction_Attribute_Specificity
+description: "The user initially provides a description that is ambiguous or applies an attribute too broadly (a slip of the tongue). After seeing the results, the user self-corrects to specify that the attribute applies only to a specific part, not the whole subject."
+dialogue_pattern:
+  description: "Broad Category -> Ambiguous Request -> Realization & Self-Correction -> Further Refinement (if needed) -> Lock on Target"
+  important_notes:
+  - "These stages are LOGICAL PHASES, not a turn-by-turn script"
+  - "Initial Ambiguous Request: You MUST intentionally describe a key attribute incorrectly or too broadly."
+  - "Realization & Self-Correction: In the IMMEDIATE next turn, look at the retrieved images (which will likely match your wrong description) and correct yourself."
+  - "Correction Style: Natural speech. E.g., 'Actually, I misspoke, I didn't mean the whole [Subject] is [Attribute], just the [Specific Part].'" 
+  - "You may stay in the same stage for 2-4 turns if needed to reveal details gradually"
+settings:
+  num_goal_images: 1
+  min_turns: 3
+  max_turns: 8

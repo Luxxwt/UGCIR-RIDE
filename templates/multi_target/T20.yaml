@@ -1,0 +1,21 @@
+template_id: T20_Pivoting_Simple_Change
+description: "The user searches for a specific target, finds it, but then abruptly changes their mind (pivots) to search for a completely different second target."
+dialogue_pattern:
+  description: "Broad Category(Target 1) -> Further Refinement 1(if needed) -> Target 1 Found & Pivot Request -> Further Refinement 2(if needed) -> Lock on Target"
+  important_notes:
+  - "These stages are LOGICAL PHASES, not a turn-by-turn script"
+  - "Each arrow (->) does NOT mean 'next turn' - it means 'next type of interaction'"
+  - "This template simulates a TWO-TARGET scenario: Target 1 (Initial) and Target 2 (Final)."
+  - "Broad Category(Target 1): Focus ONLY on finding 'target_image_1_description'. Ignore Target 2 for now."
+  - "Target 1 Found & Pivot Request:: Enter this stage ONLY when Target 1 is retrieved. Your Output must acknowledge the find, but then abruptly switch topics in natural speech."
+  - "After the pivot, compare retrieved images ONLY against 'target_image_2_description'."
+  - "CRITICAL: Target 2 is a FRESH START. Do NOT describe it as a modification of Target 1. Provide a full, new description."
+settings:
+  num_goal_images: 2
+  min_turns: 3
+  max_turns: 10
+special_instructions:
+  target_structure:
+    - "You will receive TWO target descriptions:"
+    - "target_image_1_description: The first image you must find before pivoting."
+    - "target_image_2_description: The final image you explicitly switch to after finding the first one."
